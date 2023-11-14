@@ -18,10 +18,10 @@ class MyGame(Widget):
         self.player1.bounce_ball(self.ball)
         self.player2.bounce_ball(self.ball)
 
-        if self.ball.x < self.x:
+        if self.ball.x <= self.x:
             self.player2.score += 1
             self.serve_ball(vel=(4, 0))
-        if self.ball.x > self.width:
+        if self.ball.x >= self.width:
             self.player1.score += 1
             self.serve_ball(vel=(-4, 0))
 
